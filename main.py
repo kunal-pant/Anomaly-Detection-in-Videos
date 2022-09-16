@@ -69,11 +69,10 @@ def main():
     # Reading data into a temporary file so that we can use cv2 on it
     tfile = tempfile.NamedTemporaryFile(delete=False)
     tfile.write(file.read())
-#     video = cv2.VideoCapture(tfile.name)
+    video = cv2.VideoCapture(tfile.name)
 
     # Function call to predict anomaly
     prediction = predict_anomaly(video)
-#     prediction = True
 
     # Display the output
     if(st.button('Predict')):
