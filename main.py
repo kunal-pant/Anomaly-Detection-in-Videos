@@ -2,7 +2,7 @@
 import streamlit as st
 import tensorflow as tf
 import numpy as np
-# import cv2
+import cv2
 import tempfile
 
 # Function to predict anomaly in the video
@@ -72,8 +72,8 @@ def main():
 #     video = cv2.VideoCapture(tfile.name)
 
     # Function call to predict anomaly
-#     prediction = predict_anomaly(video)
-    prediction = True
+    prediction = predict_anomaly(video)
+#     prediction = True
 
     # Display the output
     if(st.button('Predict')):
